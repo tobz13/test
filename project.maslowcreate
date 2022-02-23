@@ -8,17 +8,71 @@
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.4080250130276185,
+            "y": 0.44473007712082263,
+            "uniqueID": 112564,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 100
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 210
+                }
+            ]
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.6190724335591454,
+            "y": 0.4473007712082262,
+            "uniqueID": 295609,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/421152/112564Rectangle"
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
             "atomType": "Output",
             "name": "Output",
-            "x": 0.9895779051589368,
-            "y": 0.5,
+            "x": 0.8421052631578947,
+            "y": 0.7634961439588689,
             "uniqueID": 690464,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "source/421152/295609Extrude"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 112564,
+            "ap2ID": 295609
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 295609,
+            "ap2ID": 690464
+        }
+    ],
     "fileTypeVersion": 1,
-    "simplify": false,
+    "simplify": true,
     "unitsIndex": 0,
     "filetypeVersion": 1,
     "circleSegmentSize": 2
